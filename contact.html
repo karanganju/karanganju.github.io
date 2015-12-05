@@ -14,9 +14,6 @@
       body {
           background-image: url("./images/bg.jpeg");
       }
-      .panel-body:hover {
-        opacity: 1;
-      }
     </style>
 
     <!-- Bootstrap core CSS -->
@@ -62,19 +59,22 @@
           </div>
 
           <div class="inner cover">
-            <div class="panel panel-default" style="opacity:0.3">
-              <div class="panel-body" style="background-color: red; opacity: 0.9">
-                Basic panel example
+            <div class="panel panel-default" style="opacity:0.9">
+              <div class="panel-body" style="background-color: red; opacity: 0.15;">
+                <img src="./images/gmail.png" height="50px" width="50px">
+                <p style="display:none; padding: 20px; font-size: 115%"><b>Mail me at <i>karanganju9@gmail.com</i></b></p>
               </div>
             </div>
-            <div class="panel panel-default" style="opacity:0.3">
-              <div class="panel-body" style="background-color: blue; opacity: 0.9">
-                Basic panel example
+            <div class="panel panel-default" style="opacity:0.9">
+              <div class="panel-body" style="background-color: blue; opacity: 0.15">
+                <img src="./images/fb.png" height="50px" width="50px">
+                <a href="https://www.facebook.com/karan.ganju.7" style="display:none; padding: 20px; font-size: 115%"><b>Meet me on facebook!</b></a>
               </div>
             </div>
-            <div class="panel panel-default" style="opacity:0.3">
-              <div class="panel-body" style="background-color: green; opacity: 0.9">
-                Basic panel example
+            <div class="panel panel-default" style="opacity:0.9">
+              <div class="panel-body" style="background-color: green; opacity: 0.15">
+                <img src="./images/github.png" height="50px" width="50px">
+                <a href="https://github.com/karanganju" style="display:none; padding: 20px; font-size: 115%"><b>Click to visit my github repository!</b></a>
               </div>
             </div>
           </div>
@@ -99,5 +99,20 @@
     <script src="./dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $(".panel-body").hover(function(){
+            $(this).css("opacity","1");
+            $(this).find("img:first").animate({marginRight: "100px"})
+            $(this).find("p:first,a:first").css("display","inline")
+            $(this).parent().css("opacity","0.3")
+            }, function(){
+            $(this).css("opacity","0.9");
+            $(this).find("img:first").animate({marginRight: "0"})
+            $(this).find("p:first,a:first").css("display","none")
+        });
+    });
+    </script>
   </body>
 </html>
