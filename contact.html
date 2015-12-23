@@ -44,7 +44,7 @@
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
+          <div class="masthead clearfix" style="text-shadow: 1px 1px 1px #444444">
             <div
               <nav>
                 <ul class="nav masthead-nav" style="position: relative; top: 20px">
@@ -58,21 +58,21 @@
             </div>
           </div>
 
-          <div class="inner cover">
-            <div class="panel panel-default" style="opacity:0.9">
-              <div class="panel-body" style="background-color: red; opacity: 0.15;">
+          <div class="inner cover" style="">
+            <div class="panel panel-default" style="background-color: black; opacity:0.3; border-radius: 12px; height: 80px">
+              <div class="panel-body" style="border-radius: 12px; height: 80px">
                 <img src="./images/gmail.png" height="50px" width="50px">
                 <p style="display:none; padding: 20px; font-size: 115%"><b>Mail me at <i>karanganju9@gmail.com</i></b></p>
               </div>
             </div>
-            <div class="panel panel-default" style="opacity:0.9">
-              <div class="panel-body" style="background-color: blue; opacity: 0.15">
+            <div class="panel panel-default" style="background-color: black; opacity:0.3; border-radius: 12px; height: 80px">
+              <div class="panel-body" style="border-radius: 12px; height: 80px">
                 <img src="./images/fb.png" height="50px" width="50px">
                 <a href="https://www.facebook.com/karan.ganju.7" style="display:none; padding: 20px; font-size: 115%"><b>Meet me on facebook!</b></a>
               </div>
             </div>
-            <div class="panel panel-default" style="opacity:0.9">
-              <div class="panel-body" style="background-color: green; opacity: 0.15">
+            <div class="panel panel-default" style="background-color: black; opacity:0.3; border-radius: 12px; height: 80px">
+              <div class="panel-body" style="border-radius: 12px; height: 80px">
                 <img src="./images/github.png" height="50px" width="50px">
                 <a href="https://github.com/karanganju" style="display:none; padding: 20px; font-size: 115%"><b>Click to visit my github repository!</b></a>
               </div>
@@ -103,12 +103,11 @@
     <script>
     $(document).ready(function(){
         $(".panel-body").hover(function(){
-            $(this).css("opacity","1");
+            $(this).parent().css("opacity","0.55");
             $(this).find("img:first").animate({marginRight: "100px"})
             $(this).find("p:first,a:first").css("display","inline")
-            $(this).parent().css("opacity","0.3")
             }, function(){
-            $(this).css("opacity","0.9");
+            $(this).parent().css("opacity","0.3");
             $(this).find("img:first").animate({marginRight: "0"})
             $(this).find("p:first,a:first").css("display","none")
         });
